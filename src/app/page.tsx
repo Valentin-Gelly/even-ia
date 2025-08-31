@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Briefcase, Users, Clock } from "lucide-react";
 
 export default function Home() {
-    const fadeIn = {
+        const fadeIn = {
         hidden: { opacity: 0, y: 50 },
         visible: (custom: number) => ({
             opacity: 1,
@@ -112,66 +112,71 @@ export default function Home() {
                             />
                         </svg>
                 </motion.section>
-                <section className="flex flex-wrap justify-around gap-6 max-w-7xl mx-auto">
-                    {[
-                        {
-                            title: "Accueil IA",
-                            text: "Offrez un support automatisé et personnalisé à vos clients grâce à nos agents d'accueil.",
-                        },
-                        {
-                            title: "Automatisation",
-                            text: "Optimisez vos processus avec des flux de travail automatisés et intelligents.",
-                        },
-                        {
-                            title: "SEO GEO",
-                            text: "Améliorez votre référencement local avec des stratégies SEO géolocalisées.",
-                        },
-                    ].map((item, index) => (
-                        <motion.div
-                            key={index}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, amount: 0.1 }}
-                            variants={fadeIn}
-                            custom={index + 1}
-                            className="mt-[5%] w-[30%] px-6 py-24 rounded-3xl border border-black/5 bg-white/60 shadow-2xl backdrop-blur-2xl flex flex-col items-center text-center"
-                        >
-                            <h2 className="text-4xl text-center mb-6 font-extrabold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
-                                {item.title}
-                            </h2>
-                            <p className="text-xl text-slate-700">{item.text}</p>
-                        </motion.div>
-                    ))}
-                </section>
-
                 <section>
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.1 }}
                         variants={fadeIn}
-                        className="mt-[5%] max-w-7xl px-6 rounded-3xl border border-black/5 bg-white/60 p-10 shadow-2xl backdrop-blur-2xl py-24 flex "
+                        className="mt-[5%] max-w-7xl px-6 rounded-3xl border border-black/5 bg-white/60 p-10 shadow-2xl backdrop-blur-2xl py-24 flex flex-col md:flex-row items-center gap-12"
                     >
-                    <Image
-                        src="/even-ia-light.png"
-                        alt="Logo de Even IA"
-                        width={300}
-                        height={300}
-                        priority
-                    >
-                    </Image>
-                        <section className="mx-auto w-[60%]">
-                            <h2 className="text-6xl text-left mb-6 font-extrabold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
-                                Qui sommes nous ?
+                        <Image
+                            src="/even-ia-light.png"
+                            alt="Logo de Even IA"
+                            width={300}
+                            height={300}
+                            priority
+                            className="flex-shrink-0"
+                        />
+
+                        <section className="mx-auto w-full md:w-[60%] space-y-6">
+                            <h2 className="text-6xl text-left font-extrabold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
+                                Qui sommes-nous ?
                             </h2>
-                            <p className="text-xl text-left text-slate-700 max-w-4xl mx-auto">
-                                AVEN.IA est une agence spécialisée dans les agents d’accueil virtuels (chatbots) et l’automatisation intelligente.
+
+                            <p className="text-xl leading-relaxed text-left text-slate-700">
+                                <span className="font-semibold text-slate-900">AVEN.IA</span> est une
+                                agence spécialisée dans les{" "}
+                                <span className="text-[#00B9FF] font-medium">agents d’accueil virtuels</span>{" "}
+                                (chatbots) et l’
+                                <span className="text-[#9B00FF] font-medium">automatisation intelligente</span>.
                             </p>
-                            <p className="text-xl text-left text-slate-700 max-w-4xl mx-auto">
-                                Nous croyons en une technologie sobre, élégante et centrée sur l’humain. Notre objectif est de devenir un partenaire de confiance pour les entreprises qui veulent gagner du temps, améliorer leur performance et préparer l’avenir.
-                            </p>
+
+                            <div className="flex flex-col gap-6 mt-6">
+                                {[
+                                    "Offrir aux TPE & PME des outils performants et accessibles, comparables à ceux des grandes entreprises.",
+                                    "Optimiser la relation client avec des assistants disponibles 24/7, capables de répondre, qualifier et générer des opportunités.",
+                                    "Libérer du temps aux dirigeants en déléguant les tâches répétitives à l’IA.",
+                                ].map((value, i) => (
+                                    <div
+                                        key={i}
+                                        className="flex items-center gap-3 text-lg text-slate-700"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="w-6 h-6 text-[#00FFC8]"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M5 13l4 4L19 7"
+                                            />
+                                        </svg>
+                                        {value}
+                                    </div>
+                                ))}
+                            </div>
+
+                            <blockquote className="mt-8 italic text-xl text-slate-600 border-l-4 border-[#00B9FF] pl-4">
+                                « Nous croyons en une technologie sobre, élégante et centrée sur l’humain. Notre objectif est de devenir un partenaire de confiance pour les entreprises qui veulent gagner du temps, améliorer leur performance et préparer l’avenir. »
+                            </blockquote>
                         </section>
                     </motion.div>
+
                 </section>
                 <section>
                     <motion.div
@@ -179,7 +184,7 @@ export default function Home() {
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.1 }}
                         variants={fadeIn}
-                        className="mt-[5%] max-w-7xl px-6 rounded-3xl p-10 py-24 flex flex-col"
+                        className=" max-w-7xl px-6 rounded-3xl p-10 py-24 flex flex-col"
                     >
                         <h2 className="text-6xl text-center mb-6 font-extrabold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
                             Nos missions
@@ -219,10 +224,194 @@ export default function Home() {
                                 </motion.div>
                             ))}
                         </section>
+                    </motion.div>
+                </section>
+                <section>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.1 }}
+                        variants={fadeIn}
+                        className=" rounded-3xl py-24 flex flex-col"
+                    >
+                        <h2 className="text-6xl text-center mb-6 font-extrabold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
+                            Un mot des fondateurs
+                        </h2>
+                        <section className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto mt-16">
+                            {[
+                                {
+                                    name: "Vincent",
+                                    role: "Co-fondateur",
+                                    message:
+                                        "Mon expérience professionnelle, notamment dans le milieu de l’usine, m’a permis de comprendre " +
+                                        "que je voulais aller au-delà d’une simple tâche répétitive. J’ai pu constater de grosses failles dans" +
+                                        " l’organisation de systèmes pourtant très bien rodés — des failles qui auraient pu être comblées grâce à l’IA. " +
+                                        "Aujourd’hui, mon ambition est de permettre aux entreprises de se développer, de s’optimiser et d’exploiter pleinement les nouvelles technologies.",
+                                    image: "/profile-icon.png",
+                                },
+                                {
+                                    name: "Bastien",
+                                    role: "Co-fondateur",
+                                    message:
+                                        "Mon parcours m’a conduit à tester plusieurs métiers et environnements différents. De ces expériences, " +
+                                        "j’ai tiré deux leçons essentielles : Dans la majorité des entreprises où j’ai travaillé, j’ai vu à quel point certains " +
+                                        "outils d’IA et d’automatisation auraient pu transformer leur fonctionnement. J’ai réalisé que ce que j’aimais réellement, " +
+                                        "c’était apporter des solutions utiles qui simplifient le quotidien des professionnels et créent de la valeur.",
+                                    image: "/profile-icon.png",
+                                },
+                            ].map((founder, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true, amount: 0.1 }}
+                                    variants={fadeIn}
+                                    custom={index + 1}
+                                    className="w-full md:w-[45%] px-8 py-10 rounded-3xl border border-black/5 bg-white/60 shadow-2xl backdrop-blur-2xl flex flex-col items-center text-center gap-6"
+                                >
+                                    {/* Avatar */}
+                                    <Image
+                                        src={founder.image}
+                                        alt={founder.name}
+                                        width={120}
+                                        height={120}
+                                        className="rounded-full object-cover border-4 border-[#00B9FF]/40 shadow-lg"
+                                    />
 
+                                    {/* Info */}
+                                    <div>
+                                        <h3 className="text-3xl font-bold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
+                                            {founder.name}
+                                        </h3>
+                                        <p className="text-slate-600 font-medium text-2xl">{founder.role}</p>
+                                    </div>
+
+                                    {/* Message */}
+                                    <blockquote className="relative text-xl text-slate-700 italic leading-relaxed">
+                                        <span className="absolute -top-4 -left-3 text-5xl text-[#9B00FF]/30">“</span>
+                                        {founder.message}
+                                        <span className="absolute -bottom-6 -right-3 text-5xl text-[#9B00FF]/30">”</span>
+                                    </blockquote>
+                                </motion.div>
+                            ))}
+                        </section>
+                    </motion.div>
+                </section>
+                <section>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.1 }}
+                        variants={fadeIn}
+                        className=" rounded-3xl py-24 flex flex-col"
+                    >
+                        <h2 className="text-6xl text-center mb-6 font-extrabold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
+                            Ils nous ont fait confiance
+                        </h2>
+                        <section className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto mt-16">
+                            {[
+                                {
+                                    name: "Open Ouest Provence Entreprise",
+                                    link: "https://www.entreprisesouestprovence.fr/",
+                                    description: "Un acteur local engagé pour le développement économique et l’innovation.",
+                                    image: "/client/open-mistral.png",
+                                    formule: "Standard",
+                                },
+                                {
+                                    name: "Autre Entreprise",
+                                    link: "https://www.exemple.com",
+                                    description: "Entreprise spécialisée dans les solutions numériques innovantes.",
+                                    image: "/client/open-mistral.png",
+                                    formule: "Premium",
+                                },
+                                {
+                                    name: "Autre Entreprise",
+                                    link: "https://www.exemple.com",
+                                    description: "Entreprise spécialisée dans les solutions numériques innovantes.",
+                                    image: "/client/open-mistral.png",
+                                    formule: "Standard",
+                                },
+                                {
+                                    name: "Autre Entreprise",
+                                    link: "https://www.exemple.com",
+                                    description: "Entreprise spécialisée dans les solutions numériques innovantes.",
+                                    image: "/client/open-mistral.png",
+                                    formule: "Premium",
+                                },
+                            ].map((client, index) => (
+                                <motion.a
+                                    key={index}
+                                    href={client.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true, amount: 0.1 }}
+                                    variants={fadeIn}
+                                    custom={index + 1}
+                                    className="w-full md:w-[40%] rounded-3xl border border-black/5 bg-white/60 shadow-2xl backdrop-blur-2xl overflow-hidden flex flex-col transition-transform hover:scale-[1.02]"
+                                >
+                                    {/* Image avec fondu */}
+                                    <div className="relative w-full h-48">
+                                        <Image
+                                            src={client.image}
+                                            alt={client.name}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+                                    </div>
+
+                                    {/* Contenu */}
+                                    <div className="flex flex-col items-center text-center p-6 gap-4">
+                                        <h3 className="text-4xl font-bold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
+                                            {client.name}
+                                        </h3>
+                                        <h4>
+                                            Formule : <span className="text-[#00B9FF] font-medium">{client.formule}</span>
+                                        </h4>
+                                        {client.description && (
+                                            <p className="text-xl text-slate-700">{client.description}</p>
+                                        )}
+                                    </div>
+                                </motion.a>
+                            ))}
+                        </section>
 
                     </motion.div>
                 </section>
+                {/*<section className="flex flex-wrap justify-around gap-6 max-w-7xl mx-auto">*/}
+                {/*    {[*/}
+                {/*        {*/}
+                {/*            title: "Accueil IA",*/}
+                {/*            text: "Offrez un support automatisé et personnalisé à vos clients grâce à nos agents d'accueil.",*/}
+                {/*        },*/}
+                {/*        {*/}
+                {/*            title: "Automatisation",*/}
+                {/*            text: "Optimisez vos processus avec des flux de travail automatisés et intelligents.",*/}
+                {/*        },*/}
+                {/*        {*/}
+                {/*            title: "SEO GEO",*/}
+                {/*            text: "Améliorez votre référencement local avec des stratégies SEO géolocalisées.",*/}
+                {/*        },*/}
+                {/*    ].map((item, index) => (*/}
+                {/*        <motion.div*/}
+                {/*            key={index}*/}
+                {/*            initial="hidden"*/}
+                {/*            whileInView="visible"*/}
+                {/*            viewport={{ once: true, amount: 0.1 }}*/}
+                {/*            variants={fadeIn}*/}
+                {/*            custom={index + 1}*/}
+                {/*            className="mt-[5%] w-[30%] px-6 py-24 rounded-3xl border border-black/5 bg-white/60 shadow-2xl backdrop-blur-2xl flex flex-col items-center text-center"*/}
+                {/*        >*/}
+                {/*            <h2 className="text-4xl text-center mb-6 font-extrabold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">*/}
+                {/*                {item.title}*/}
+                {/*            </h2>*/}
+                {/*            <p className="text-xl text-slate-700">{item.text}</p>*/}
+                {/*        </motion.div>*/}
+                {/*    ))}*/}
+                {/*</section>*/}
+
                 <section id="contact" className="flex items-center justify-center bg-gradient-to-tr font-montserrat w-full mt-[5%] ">
                     <form
                         className="relative bg-white/30 backdrop-blur-md  rounded-2xl border border-white/20 shadow-2xl grid grid-cols-2 gap-6 w-1/2 p-[3%]">
