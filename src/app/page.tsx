@@ -4,6 +4,7 @@ import Image from "next/image";
 import Typewriter from 'typewriter-effect';
 import { motion } from "framer-motion";
 import { Briefcase, Users, Clock } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
         const fadeIn = {
@@ -14,14 +15,21 @@ export default function Home() {
             transition: { delay: custom * 0.2, duration: 0.8 },
         }),
     };
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    // Detect scroll position
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50); // Shrink header if scrolled more than 50px
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A] font-sans flex flex-col justify-center items-center">
-            {/* Background accents */}
-            <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-                <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-[#9B00FF]/10 blur-3xl"/>
-                <div className="absolute top-1/3 -right-24 h-96 w-96 rounded-full bg-[#00B9FF]/10 blur-3xl"/>
-                <div className="absolute bottom-0 left-1/4 h-72 w-72 rounded-full bg-[#00FFC8]/10 blur-3xl"/>
-            </div>
+        <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A] font-sans flex flex-col justify-center items-center ">
             <motion.header
                 initial="hidden"
                 animate="visible"
@@ -31,29 +39,60 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
             {/* Header */}
-            <header className=" fixed top-0 left-0 w-full z-50">
-                <div className="mx-auto px-6 py-4">
-                    <div
-                        className=" relative bg-white/30 backdrop-blur-md  rounded-2xl border border-white/20 shadow-2xl flex items-center justify-between h-full w-10/12 bg-clip-padding backdrop-filter bg-opacity-60 mx-auto">
-                        <div className="px-5 py-3">
+                <header
+                    className={` relative bg-white/80 backdrop-blur-md  rounded-2xl border border-white/20 
+                    shadow-2xl flex  h-full w-8/12 bg-clip-padding backdrop-filter bg-opacity-60 mx-auto transition-all duration-300 ${
+                        isScrolled ? "py-0 shadow-md" : "  mt-8 py-6"
+                    } backdrop-blur-md`}
+                >
+                    <div className="px-6 flex items-center justify-between w-full">
+                        {/* Logo */}
+                        <div className="flex-shrink-0">
                             <Image
-                                src="/even-ia-light.png"
+                                src="/aven-ia-light.png"
                                 alt="AVEN.IA Logo"
                                 width={120}
                                 height={40}
                                 priority
-                                className={"object-contain"}
+                                className="object-contain"
                             />
                         </div>
-                        <nav className="hidden md:flex items-center gap-6 px-6 text-slate-700 font-medium text-2xl">
-                            <a href="#about" className="hover:text-[#00B9FF] transition">À propos</a>
-                            <a href="#services" className="hover:text-[#00B9FF] transition">Services</a>
-                            <a href="#testimony" className="hover:text-[#00B9FF] transition">Témoignages</a>
-                            <a href="#contact" className="hover:text-[#00B9FF] transition">Contact</a>
+
+                        {/* Navigation */}
+                        <nav className="hidden md:flex items-center gap-6 text-slate-700 font-medium text-lg">
+                            <a href="#about" className="hover:text-[#00B9FF] transition">
+                                À propos
+                            </a>
+                            <a href="#services" className="hover:text-[#00B9FF] transition">
+                                Services
+                            </a>
+                            <a href="#testimony" className="hover:text-[#00B9FF] transition">
+                                Témoignages
+                            </a>
+                            <a href="#contact" className="hover:text-[#00B9FF] transition">
+                                Contact
+                            </a>
                         </nav>
+
+                        {/* Mobile Menu Button */}
+                        <button className="md:hidden text-slate-700">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={2}
+                                stroke="currentColor"
+                                className="w-6 h-6"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M4 6h16M4 12h16m-7 6h7"
+                                />
+                            </svg>
+                        </button>
                     </div>
-                </div>
-            </header>
+                </header>
         </motion.header>
 
             <body>
@@ -62,16 +101,16 @@ export default function Home() {
                     whileInView="visible"
                     variants={fadeIn}
                     custom={0}
-                    className="mt-[10%] relative max-w-7xl px-6 pt-16 pb-10 flex items-center text-center w-full rounded-3xl border border-black/5 bg-white/60 p-10 shadow-2xl backdrop-blur-2xl"
+                    className="mt-[10%] relative max-w-7xl px-6 pt-16 pb-10 flex items-center text-center rounded-3xl border border-black/5 bg-white/60 p-10 shadow-2xl backdrop-blur-2xl"
                     viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible
                 >
-                        <div
-                            className="mx-auto max-w-4xl w-[60%]">
-                            <h2 className="text-left text-7xl font-extrabold tracking-tight bg-gradient-to-r  bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
+                    <div
+                        className="mx-auto max-w-4xl w-[60%]">
+                            <h2 className="text-left text-7xl tracking-tight bg-gradient-to-r  bg-clip-text text-black ">
                                 <Typewriter
                                     options={{
                                         strings: [
-                                            "Even IA : Des agents d'accueil IA pour votre entreprise",
+                                            "Aven-IA : Des agents d'accueil IA pour votre entreprise",
                                         ],
                                         autoStart: true,
                                         loop: false,
@@ -86,33 +125,15 @@ export default function Home() {
                                 artificielle.
                             </p>
                         </div>
-                        <svg
-                            fill="#000000"
-                            viewBox="0 0 40 40"
-                            width={300}
-                            id="icon"
-                            className="mx-auto mt-10 "
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <defs>
-                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stopColor="#00B9FF"/>
-                                </linearGradient>
-                            </defs>
-                            <title>chat-bot</title>
-                            <path
-                                d="M16,19a6.9908,6.9908,0,0,1-5.833-3.1287l1.666-1.1074a5.0007,5.0007,0,0,0,8.334,0l1.666,1.1074A6.9908,6.9908,0,0,1,16,19Z"
-                                fill="url(#grad1)"
-                            />
-                            <path d="M20,8a2,2,0,1,0,2,2A1.9806,1.9806,0,0,0,20,8Z" fill="url(#grad1)"/>
-                            <path d="M12,8a2,2,0,1,0,2,2A1.9806,1.9806,0,0,0,12,8Z" fill="url(#grad1)"/>
-                            <path
-                                d="M17.7358,30,16,29l4-7h6a1.9966,1.9966,0,0,0,2-2V6a1.9966,1.9966,0,0,0-2-2H6A1.9966,1.9966,0,0,0,4,6V20a1.9966,1.9966,0,0,0,2,2h9v2H6a3.9993,3.9993,0,0,1-4-4V6A3.9988,3.9988,0,0,1,6,2H26a3.9988,3.9988,0,0,1,4,4V20a3.9993,3.9993,0,0,1-4,4H21.1646Z"
-                                fill="url(#grad1)"
-                            />
-                        </svg>
+                    <Image
+                        src="/home-bot.png"
+                        alt="Image d'illustration"
+                        width={600}
+                        height={600}
+                        className="right-0 top-0 h-128 w-128 md:h-80 md:w-80 lg:h-96 lg:w-96 object-contain rounded-4xl -z-10">
+                    </Image>
                 </motion.section>
-                <section>
+                <section id="about">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -121,16 +142,16 @@ export default function Home() {
                         className="mt-[5%] max-w-7xl px-6 rounded-3xl border border-black/5 bg-white/60 p-10 shadow-2xl backdrop-blur-2xl py-24 flex flex-col md:flex-row items-center gap-12"
                     >
                         <Image
-                            src="/even-ia-light.png"
-                            alt="Logo de Even IA"
+                            src="/aven-ia-light.png"
+                            alt="Logo de aven IA"
                             width={300}
                             height={300}
                             priority
-                            className="flex-shrink-0"
+                            className="flex-shrink-0 "
                         />
 
                         <section className="mx-auto w-full md:w-[60%] space-y-6">
-                            <h2 className="text-6xl text-left font-extrabold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
+                            <h2 className="text-5xl text-left  tracking-tight bg-gradient-to-r bg-clip-text  text-black">
                                 Qui sommes-nous ?
                             </h2>
 
@@ -172,7 +193,7 @@ export default function Home() {
                             </div>
 
                             <blockquote className="mt-8 italic text-xl text-slate-600 border-l-4 border-[#00B9FF] pl-4">
-                                « Nous croyons en une technologie sobre, élégante et centrée sur l’humain. Notre objectif est de devenir un partenaire de confiance pour les entreprises qui veulent gagner du temps, améliorer leur performance et préparer l’avenir. »
+                                « Nous croyons en une technologie sobre, élégante et centrée sur l’humain. Notre objectif est de davenir un partenaire de confiance pour les entreprises qui veulent gagner du temps, améliorer leur performance et préparer l’avenir. »
                             </blockquote>
                         </section>
                     </motion.div>
@@ -186,7 +207,7 @@ export default function Home() {
                         variants={fadeIn}
                         className=" max-w-7xl px-6 rounded-3xl p-10 py-24 flex flex-col"
                     >
-                        <h2 className="text-6xl text-center mb-6 font-extrabold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
+                        <h2 className="text-6xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">
                             Nos missions
                         </h2>
                         <section className="flex flex-wrap justify-around gap-6 max-w-7xl mx-auto">
@@ -217,7 +238,7 @@ export default function Home() {
                                     className="mt-[5%] w-[30%] px-6 py-12 rounded-3xl border border-black/5 bg-white/60 shadow-2xl backdrop-blur-2xl flex flex-col items-center text-center"
                                 >
                                     {mission.icon}
-                                    <h2 className="text-2xl mb-4 font-extrabold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
+                                    <h2 className="text-2xl mb-4 font-bold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
                                         {mission.title}
                                     </h2>
                                     <p className="text-lg text-slate-700">{mission.text}</p>
@@ -232,9 +253,9 @@ export default function Home() {
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.1 }}
                         variants={fadeIn}
-                        className=" rounded-3xl py-24 flex flex-col"
+                        className=" rounded-3xl flex flex-col"
                     >
-                        <h2 className="text-6xl text-center mb-6 font-extrabold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
+                        <h2 className="text-6xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">
                             Un mot des fondateurs
                         </h2>
                         <section className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto mt-16">
@@ -297,46 +318,141 @@ export default function Home() {
                         </section>
                     </motion.div>
                 </section>
-                <section>
+                <section id="services">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.1 }}
                         variants={fadeIn}
-                        className=" rounded-3xl py-24 flex flex-col"
+                        className=" max-w-7xl pt-34 px-6 rounded-3xl p-10 flex flex-col"
                     >
-                        <h2 className="text-6xl text-center mb-6 font-extrabold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
+                        <h2 className="text-5xl text-center mb-6  tracking-tight bg-gradient-to-r bg-clip-text ">
+                            Nos Offres
+                        </h2>
+                        <section className="flex flex-wrap justify-around gap-6 max-w-7xl mx-auto">
+                            {[
+                                {
+                                    title: "Start : FAQ Turbo",
+                                    info: [
+                                        "FAQ IA connectée base",
+                                        "Capture leads intelligente",
+                                        "1 canal, 1000 messages",
+                                        "2 options au choix",
+                                        "Branding personnalisé",
+                                        "Support email 72h"
+                                    ],
+                                    priceMonth: "149",
+                                    priceSetup: "280",
+                                    installation_time: "≤ 7 jours",
+                                    best: false
+                                },
+                                {
+                                    title: "Grow : RDV Booster",
+                                    info: [
+                                        "Tout Start inclus",
+                                        "Qualification leads rapide",
+                                        "Prise RDV instantanée",
+                                        "Rappels SMS WhatsApp",
+                                        "Intégration CRM complète",
+                                        "Rapport hebdo RDV leads",
+                                        "2 canaux, 3000 messages",
+                                        "Support Slack 48h",
+                                        "Garantie résultats 30j"
+                                    ],
+                                    priceMonth: "390",
+                                    priceSetup: "590",
+                                    installation_time: "≤ 10 jours",
+                                    best: true
+                                },
+                                {
+                                    title: "Scale : Opérateur+ Omnicanal",
+                                    info: [
+                                        "Tout Grow inclus",
+                                        "Inbox omnicanale complète",
+                                        "Handoff humain instantané",
+                                        "RAG multi-sources quotidien",
+                                        "Paiement & e-signature",
+                                        "Dashboard décisionnel",
+                                        "4+ canaux, 10000 messages",
+                                        "6 intégrations possibles",
+                                        "Support prioritaire 24h",
+                                        "Success mensuel inclus"
+                                    ],
+                                    priceMonth: "990",
+                                    priceSetup: "1190",
+                                    installation_time: "≤ 15 jours",
+                                    best: false
+                                }
+                            ].map((mission, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true, amount: 0.1 }}
+                                    variants={fadeIn}
+                                    custom={index + 1}
+                                    className={`relative mt-[5%] w-[30%] px-6 py-12 rounded-3xl border shadow-2xl backdrop-blur-2xl flex flex-col items-center text-center transition-all ${
+                                        mission.best
+                                            ? "bg-gradient-to-br from-[#9B00FF]/10 via-[#00B9FF]/10 to-[#00FFC8]/10 border-[#00B9FF] scale-105"
+                                            : "bg-white/60 border-black/5"
+                                    }`}
+                                >
+                                    {mission.best && (
+                                        <div className="absolute top-4 right-4 bg-gradient-to-r from-[#9B00FF] to-[#00B9FF] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+                                            ⭐ Meilleure offre
+                                        </div>
+                                    )}
+
+                                    <h2 className="text-2xl mb-4 font-bold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
+                                        {mission.title}
+                                    </h2>
+
+                                    <ul className="text-slate-700 text-sm space-y-2 mb-6">
+                                        {mission.info.map((item, i) => (
+                                            <li key={i} className="flex items-center gap-2">
+                                                <span className="text-[#00B9FF]">✔</span> {item}
+                                            </li>
+                                        ))}
+                                    </ul>
+
+                                    <div className="flex flex-col items-center space-y-2">
+                                        <p className="text-xl font-bold text-slate-800">
+                                            {mission.priceMonth}€ <span className="text-sm font-normal">/mois</span>
+                                        </p>
+                                        <p className="text-sm text-slate-600">Setup : {mission.priceSetup}€</p>
+                                        <p className="text-sm text-slate-500">
+                                            Installation {mission.installation_time}
+                                        </p>
+                                    </div>
+
+                                    <button className="mt-6 px-6 py-3 rounded-2xl bg-gradient-to-r from-[#9B00FF] to-[#00B9FF] text-white font-semibold shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                                        Choisir cette offre
+                                    </button>
+                                </motion.div>
+                            ))}
+                        </section>
+
+                    </motion.div>
+                </section>
+                <section id="testimony" className="w-full">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.1 }}
+                        variants={fadeIn}
+                        className=" w-[75%] pt-34 px-6 rounded-3xl p-10 flex flex-col mx-auto"
+                    >
+                        <h2 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">
                             Ils nous ont fait confiance
                         </h2>
-                        <section className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto mt-16">
+                        <section className="flex flex-wrap justify-center gap-8 w-full mx-auto mt-16">
                             {[
                                 {
                                     name: "Open Ouest Provence Entreprise",
                                     link: "https://www.entreprisesouestprovence.fr/",
                                     description: "Un acteur local engagé pour le développement économique et l’innovation.",
                                     image: "/client/open-mistral.png",
-                                    formule: "Standard",
-                                },
-                                {
-                                    name: "Autre Entreprise",
-                                    link: "https://www.exemple.com",
-                                    description: "Entreprise spécialisée dans les solutions numériques innovantes.",
-                                    image: "/client/open-mistral.png",
-                                    formule: "Premium",
-                                },
-                                {
-                                    name: "Autre Entreprise",
-                                    link: "https://www.exemple.com",
-                                    description: "Entreprise spécialisée dans les solutions numériques innovantes.",
-                                    image: "/client/open-mistral.png",
-                                    formule: "Standard",
-                                },
-                                {
-                                    name: "Autre Entreprise",
-                                    link: "https://www.exemple.com",
-                                    description: "Entreprise spécialisée dans les solutions numériques innovantes.",
-                                    image: "/client/open-mistral.png",
-                                    formule: "Premium",
+                                    formule: "Start : FAQ Turbo",
                                 },
                             ].map((client, index) => (
                                 <motion.a
@@ -349,7 +465,7 @@ export default function Home() {
                                     viewport={{ once: true, amount: 0.1 }}
                                     variants={fadeIn}
                                     custom={index + 1}
-                                    className="w-full md:w-[40%] rounded-3xl border border-black/5 bg-white/60 shadow-2xl backdrop-blur-2xl overflow-hidden flex flex-col transition-transform hover:scale-[1.02]"
+                                    className="md:w-[30%] rounded-3xl border border-black/5 bg-white/60 shadow-2xl backdrop-blur-2xl overflow-hidden flex flex-col transition-transform hover:scale-[1.02]"
                                 >
                                     {/* Image avec fondu */}
                                     <div className="relative w-full h-48">
@@ -364,7 +480,7 @@ export default function Home() {
 
                                     {/* Contenu */}
                                     <div className="flex flex-col items-center text-center p-6 gap-4">
-                                        <h3 className="text-4xl font-bold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">
+                                        <h3 className="text-3xl font-bold tracking-tight bg-gradient-to-r bg-clip-text text-black">
                                             {client.name}
                                         </h3>
                                         <h4>
@@ -404,7 +520,7 @@ export default function Home() {
                 {/*            custom={index + 1}*/}
                 {/*            className="mt-[5%] w-[30%] px-6 py-24 rounded-3xl border border-black/5 bg-white/60 shadow-2xl backdrop-blur-2xl flex flex-col items-center text-center"*/}
                 {/*        >*/}
-                {/*            <h2 className="text-4xl text-center mb-6 font-extrabold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">*/}
+                {/*            <h2 className="text-3xl text-center mb-6  tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-[#9B00FF] via-[#00B9FF] to-[#00FFC8]">*/}
                 {/*                {item.title}*/}
                 {/*            </h2>*/}
                 {/*            <p className="text-xl text-slate-700">{item.text}</p>*/}
@@ -443,10 +559,7 @@ export default function Home() {
                             className="col-span-2 px-4 py-3 rounded-2xl bg-transparent border border-white/20 shadow-lg focus:outline-none focus:bg-white/10 focus:shadow-xl transition resize-none"
                         ></textarea>
 
-                        <button
-                            type="submit"
-                            className="w-1/4 col-span-2 mt-4 py-3 rounded-full bg-white/20 font-semibold shadow-lg transition duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#9B00FF] hover:via-[#00B9FF] hover:to-[#00FFC8] hover:text-white active:bg-white/40"
-                        >
+                        <button className="col-span-2 mx-auto mt-6 px-6 py-3 rounded-2xl bg-gradient-to-r hover:from-[#9B00FF] hover:to-[#00B9FF] hover:text-white font-semibold shadow-lg hover:scale-105 transition-transform cursor-pointer w-[25%]">
                             Envoyer
                         </button>
                     </form>

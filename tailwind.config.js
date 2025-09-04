@@ -31,6 +31,9 @@ module.exports = {
             boxShadow: {
                 glass: "0 8px 32px rgba(0, 0, 0, 0.37)", // ombre douce premium
             },
+            dropShadowLogo: {
+                custom: "0px 0px 3px #116466", // Define your custom drop shadow
+            },
         },
     },
     plugins: [],
