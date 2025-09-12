@@ -166,33 +166,16 @@ export default function Home() {
                     </ul>
                 </section>
             </motion.section>
-            <motion.section
-                initial="hidden"
-                whileInView="visible"
-                variants={fadeIn}
-                custom={0}
-                className="relative max-w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse
-                md:flex-wrap text-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12"
-                viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible
-            >
-                <section className="backdrop-blur-xl py-16">
-                    <h2 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Témoignages</h2>
-                    <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-2 text-xl italic text-slate-700">
-                        <blockquote>« En une semaine, notre agent IA était en ligne et nous a déjà permis de récupérer 30
-                            nouveaux contacts qualifiés. » <br/>— Julien, e-commerce
-                        </blockquote>
-                        <blockquote>« On a enfin un accueil pro sur notre site, et on ne perd plus de temps à répondre aux
-                            mêmes questions. » <br/>— Clara, dirigeante PME
-                        </blockquote>
-                    </div>
-                </section>
-            </motion.section>
             <section
                 className="relative max-w-7xl px-6 pb-10 flex justify-center flex-wrap text-center md:rounded-3xl mt-12"
             >
-                <h2 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">
+                <motion.h2
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.1 }}
+                    className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">
                     Ils nous ont fait confiance
-                </h2>
+                </motion.h2>
                 <section className="flex flex-wrap justify-center gap-8 w-full mx-auto md:mt-16">
                     {[
                         {
@@ -200,7 +183,7 @@ export default function Home() {
                             link: "https://www.entreprisesouestprovence.fr/",
                             description: "Un acteur local engagé pour le développement économique et l’innovation.",
                             image: "/client/open-mistral.png",
-                            formule: "Start : FAQ Turbo",
+                            formule: "Essentiel",
                         },
                     ].map((client, index) => (
                         <motion.a
@@ -215,7 +198,6 @@ export default function Home() {
                             custom={index + 1}
                             className="md:w-full sm:w-[45%] lg:w-[30%] rounded-3xl border border-black/5 bg-white/60 md:shadow-2xl backdrop-blur-2xl overflow-hidden flex flex-col transition-transform hover:scale-[1.02]"
                         >
-                            {/* Image avec fondu */}
                             <div className="relative w-full h-48">
                                 <Image
                                     src={client.image}
@@ -226,7 +208,6 @@ export default function Home() {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
                             </div>
 
-                            {/* Contenu */}
                             <div className="flex flex-col items-center text-center p-6 gap-4">
                                 <h3 className="text-3xl font-bold tracking-tight bg-gradient-to-r bg-clip-text text-black">
                                     {client.name}
