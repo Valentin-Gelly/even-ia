@@ -166,6 +166,27 @@ export default function Home() {
                     </ul>
                 </section>
             </motion.section>
+            {/*<motion.section*/}
+            {/*    initial="hidden"*/}
+            {/*    whileInView="visible"*/}
+            {/*    variants={fadeIn}*/}
+            {/*    custom={0}*/}
+            {/*    className="relative max-w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse*/}
+            {/*    md:flex-wrap text-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12"*/}
+            {/*    viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible*/}
+            {/*>*/}
+            {/*    <section className="backdrop-blur-xl py-16">*/}
+            {/*        <h2 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Témoignages</h2>*/}
+            {/*        <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-2 text-xl italic text-slate-700">*/}
+            {/*            <blockquote>« En une semaine, notre agent IA était en ligne et nous a déjà permis de récupérer 30*/}
+            {/*                nouveaux contacts qualifiés. » <br/>— Julien, e-commerce*/}
+            {/*            </blockquote>*/}
+            {/*            <blockquote>« On a enfin un accueil pro sur notre site, et on ne perd plus de temps à répondre aux*/}
+            {/*                mêmes questions. » <br/>— Clara, dirigeante PME*/}
+            {/*            </blockquote>*/}
+            {/*        </div>*/}
+            {/*    </section>*/}
+            {/*</motion.section>*/}
             <section
                 className="relative max-w-7xl px-6 pb-10 flex justify-center flex-wrap text-center md:rounded-3xl mt-12"
             >
