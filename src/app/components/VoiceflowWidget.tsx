@@ -7,9 +7,13 @@ export default function VoiceflowWidget() {
     useEffect(() => {
         if (typeof window !== "undefined") {
             const checkVF = setInterval(() => {
-                if ((window as any).voiceflow) {
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-expect-error
+                if ((window as unknown).voiceflow) {
                     clearInterval(checkVF);
-                    (window as any).voiceflow.chat.load({
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-expect-error
+                    (window as unknown).voiceflow.chat.load({
                         verify: { projectID: "68b6ae60ba1b06ff822e82bd" },
                         url: "https://general-runtime.voiceflow.com",
                         versionID: "production",
