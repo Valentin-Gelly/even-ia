@@ -44,22 +44,18 @@ export default function Header() {
             <header
                 className={` relative bg-white/70 backdrop-blur-md  md:rounded-2xl border border-white/20 
                     md:shadow-2xl flex  h-full  bg-clip-padding backdrop-filter bg-opacity-60 mx-auto transition-all duration-300 ${
-                    isScrolled ? "py-0 shadow-md w-full rounded-none" : "md:mt-8 py-6 md:py-2 shadow-md md:rounded-2xl md:w-10/12"
+                    isScrolled ? "py-0 shadow-md w-full rounded-none" : "md:mt-8 md:py-2 shadow-md md:rounded-2xl md:w-10/12"
                 }
                      backdrop-blur-md`}
             >
                 <div className={`px-6 py-2 flex items-center justify-between w-full${
                     isScrolled ? " md:py-2 px-24" : " md:py-4"
                 }`}>
-                    {/* Logo */}
                     <div className="flex-shrink-0">
-                        <Link
-                            href="/"
-                            className="text-5xl py-4">
-                            AVEN IA
+                        <Link href="/" className="text-5xl py-4 font-extrabold tracking-wide">
+                            AVEN-IA
                         </Link>
                     </div>
-                    {/* Navigation */}
                     <nav className="hidden md:flex items-center gap-6 text-slate-700 font-medium text-lg">
                         {navigation.map((item) => (
                             <Link
@@ -74,15 +70,15 @@ export default function Header() {
                             </Link>
                         ))}
                         <Link
-                            href="/contact"
+                            href="https://calendly.com/contact-aven-ia/30min"
                             className="px-6 py-3 rounded-xl bg-gradient-to-r hover:from-[#9B00FF]/60 hover:to-[#00B9FF]/60 text-white font-semibold shadow-lg hover:scale-105 transition"
                             onClick={() => setIsMenuOpen(false)}
+                            target={`_blank`}
                         >
                             Réserver une démo
                         </Link>
                     </nav>
 
-                    {/* Mobile Menu Button */}
                     {/* Mobile Menu Button */}
                     <button
                         className="md:hidden text-slate-700 z-50"
@@ -137,7 +133,7 @@ export default function Header() {
                                 </Link>
                             ))}
                             <Link
-                                href="/contact"
+                                target={`_blank`} href="https://calendly.com/contact-aven-ia/30min"
                                 className="px-6 py-3 rounded-xl bg-gradient-to-r hover:from-[#9B00FF] hover:to-[#00B9FF] text-white font-semibold shadow-lg hover:scale-105 transition"
                                 onClick={() => setIsMenuOpen(false)}
                             >

@@ -163,7 +163,7 @@ export default function About() {
                 </div>
             </motion.section>
             <section className="md:max-w-5xl md:mx-auto md:px-6 md:py-20 py-10 text-center">
-                <a href="/contact"
+                <a target={`_blank`} href="https://calendly.com/contact-aven-ia/30min"
                    className="px-6 py-3 rounded-xl bg-gradient-to-r hover:from-[#9B00FF]/60 hover:to-[#00B9FF]/60 text-white font-semibold shadow-lg hover:scale-105 transition">
                     Réserver une démo pour découvrir nos offres en action
                 </a>

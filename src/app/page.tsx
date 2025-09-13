@@ -22,7 +22,7 @@ export default function Home() {
                 variants={fadeIn}
                 custom={0}
                 className="relative max-w-7xl px-6 pt-0 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center md:rounded-3xl md:border
-                md:border-black/5 p-10 md:shadow-2xl backdrop-blur-2xl md:mt-[10em] mt-[7em]"
+                md:border-black/5 p-10 md:shadow-2xl backdrop-blur-2xl md:mt-[14em] mt-[3em]"
                 viewport={{ once: true, amount: 0.25 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
                 <div
@@ -46,7 +46,7 @@ export default function Home() {
                             Nous créons des agents d’accueil intelligents qui automatisent vos échanges clients,
                             libèrent votre temps et font passer votre entreprise dans une nouvelle dimension.
                         </p>
-                        <a href="/contact"
+                        <a target={`_blank`} href="https://calendly.com/contact-aven-ia/30min"
                            className="mt-8 inline-block px-8 py-4 rounded-2xl bg-gradient-to-r hover:from-[#9B00FF] hover:to-[#00B9FF] text-white font-semibold shadow-lg hover:scale-105 transition">
                             Réserver une démo personnalisée
                         </a>
@@ -64,7 +64,7 @@ export default function Home() {
                 variants={fadeIn}
                 custom={0}
                 className="relative w-full md:max-w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
-                md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-[10em]"
+                md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-[5em]"
                 viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
                 <section className="w-full md:max-w-7xl mx-auto px-6 md:py-24 text-center flex items-center flex-wrap justify-around gap-10">
@@ -248,7 +248,7 @@ export default function Home() {
                 <p className="text-2xl text-slate-700 mb-8">
                     En moins de 7 jours, vous pouvez déjà voir votre premier agent IA en action.
                 </p>
-                <a href="/contact"
+                <a target={`_blank`} href="https://calendly.com/contact-aven-ia/30min"
                    className="px-8 py-4 rounded-2xl bg-gradient-to-r hover:from-[#9B00FF] hover:to-[#00B9FF] text-white font-semibold shadow-lg hover:scale-105 transition">
                     Réserver une démo personnalisée
                 </a>

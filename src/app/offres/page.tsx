@@ -20,23 +20,48 @@ export default function Offre() {
                 whileInView="visible"
                 variants={fadeIn}
                 custom={0}
-                className="relative max-w-7xl px-6 pt-0 md:pb-10 flex justify-center flex-wrap text-center md:rounded-3xl mt-[10em]"
+                className="relative max-w-7xl px-6 pt-0 flex justify-center flex-wrap text-center md:rounded-3xl mt-[7em]"
                 viewport={{ once: true, amount: 0.1 }}
             >
-                <section className="max-w-5xl mx-auto px-6 md:py-16 text-center">
-                    <h1 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Nos offres</h1>
-                    <p className="mt-6 text-xl text-slate-700">
-                        Nos offres s’adaptent à votre rythme et à votre niveau de maturité digitale.
-                        Que vous souhaitiez simplement automatiser vos réponses de base ou créer un agent
-                        IA entièrement intégré, nous avons la formule adaptée.
-                    </p>
-                </section>
+                <section className="mx-auto text-center flex flex-col md:flex-row items-center">
+                    <Image
+                        src="/sitting-bot.png"
+                        alt="Logo fixe"
+                        width={300}
+                        height={300}
+                    />
+                    <section>
+                        <h1 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Nos offres</h1>
+                        <p className="mt-6 text-xl text-slate-700">
+                            Nos offres s’adaptent à votre rythme et à votre niveau de maturité digitale.
+                            Que vous souhaitiez simplement automatiser vos réponses de base ou créer un agent
+                            IA entièrement intégré, nous avons la formule adaptée.
+                        </p>
+                    </section>
 
+                </section>
+            </motion.section>
+            <motion.section
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeIn}
+                custom={1}
+                className="relative max-w-7xl px-6 pt-0 md:pb-10 flex justify-center flex-wrap text-center md:rounded-3xl"
+                viewport={{ once: true, amount: 0.1 }}
+            >
                 <section className="max-w-7xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-3">
 
-                    <div className="rounded-3xl border bg-white/60 p-8 shadow-xl text-center">
-                        <h2 className="text-3xl font-bold mb-4">Essentiel</h2>
-                        <p className="text-lg mb-6">Votre premier agent IA prêt à l’emploi</p>
+                    {/* Essentiel */}
+                    <div className="rounded-3xl border bg-white/60 p-8 shadow-xl text-center
+    transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(155,0,255,0.6)]">
+                        <h2 className="text-3xl font-bold mb-2">Essentiel</h2>
+                        <p className="text-lg mb-4">Votre premier agent IA prêt à l’emploi</p>
+                        <div className="mb-6">
+                            <p className="text-4xl font-extrabold text-slate-900">
+                                149€<span className="text-lg font-medium"> /mois</span>
+                            </p>
+                            <p className="text-slate-600">+ 290€ setup</p>
+                        </div>
                         <ul className="space-y-2 text-slate-700">
                             <li>✔ Base de connaissances initiale</li>
                             <li>✔ Interface personnalisée</li>
@@ -45,14 +70,20 @@ export default function Offre() {
                         </ul>
                     </div>
 
-                    <div
-                        className="rounded-3xl border-2 border-[#00B9FF] bg-gradient-to-br from-[#9B00FF]/10 to-[#00B9FF]/10 p-8 shadow-xl text-center scale-105">
-                        <div
-                            className="absolute top-4 right-4 bg-gradient-to-r from-[#9B00FF] to-[#00B9FF] text-white text-xs px-3 py-1 rounded-full">⭐
-                            Populaire
+                    {/* Premium */}
+                    <div className="relative rounded-3xl border-2
+                    border-[#00B9FF] bg-gradient-to-br from-[#9B00FF]/10 to-[#00B9FF]/10 p-8 shadow-xl text-center scale-105
+                     transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(0,185,255,0.6)]">
+                        <div className="absolute top-4 right-4 bg-gradient-to-r from-[#9B00FF] to-[#00B9FF] text-white text-xs px-3 py-1 rounded-full">
+                            ⭐ Populaire
                         </div>
-                        <h2 className="text-3xl font-bold mb-4">Premium</h2>
-                        <p className="text-lg mb-6">L’IA connectée à vos outils, pour gagner du temps</p>
+                        <h2 className="text-3xl font-bold mb-2">Premium</h2>
+                        <p className="text-lg mb-4">L’IA connectée à vos outils, pour gagner du temps</p>
+                        {/* Prix */}
+                        <div className="mb-6">
+                            <p className="text-4xl font-extrabold text-slate-900">990€<span className="text-lg font-medium"> /mois</span></p>
+                            <p className="text-slate-600">+ 1190€ setup</p>
+                        </div>
                         <ul className="space-y-2 text-slate-700">
                             <li>✔ Tout de l’offre Essentiel</li>
                             <li>✔ Connexions à vos outils</li>
@@ -62,9 +93,16 @@ export default function Offre() {
                         </ul>
                     </div>
 
-                    <div className="rounded-3xl border bg-white/60 p-8 shadow-xl text-center">
-                        <h2 className="text-3xl font-bold mb-4">Signature</h2>
-                        <p className="text-lg mb-6">L’expérience client ultime, 100 % sur mesure</p>
+                    {/* Signature */}
+                    <div className="rounded-3xl border bg-white/60 p-8 shadow-xl text-center
+                     transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(155,0,255,0.6)]">
+                        <h2 className="text-3xl font-bold mb-2">Signature</h2>
+                        <p className="text-lg mb-4">L’expérience client ultime, 100 % sur mesure</p>
+                        {/* Prix */}
+                        <div className="mb-6">
+                            <p className="text-4xl font-extrabold text-slate-900">390€<span className="text-lg font-medium"> /mois</span></p>
+                            <p className="text-slate-600">+ 590€ setup</p>
+                        </div>
                         <ul className="space-y-2 text-slate-700">
                             <li>✔ Tout de l’offre Premium</li>
                             <li>✔ Design et UX sur mesure</li>
@@ -73,15 +111,17 @@ export default function Offre() {
                             <li>✔ Suivi et évolution en continu</li>
                         </ul>
                     </div>
+
                 </section>
+
             </motion.section>
             <motion.section
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeIn}
-                custom={0}
+                custom={2}
                 className="relative max-w-7xl mx-auto px-6 py-20 flex justify-center"
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
             >
                 <section className="w-full text-center">
                     {/* Titre */}
@@ -125,9 +165,9 @@ export default function Offre() {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeIn}
-                custom={0}
+                custom={4}
                 className="relative md:w-7xl px-6 py-16 flex justify-center text-center md:rounded-3xl backdrop-blur-2xl"
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
             >
                 <section className="w-full">
                     <h2 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">
@@ -167,7 +207,7 @@ export default function Offre() {
             </motion.section>
 
             <section className="w-full md:max-w-5xl md:mx-auto md:px-6 py-20 text-center">
-                <a href="/contact"
+                <a target={`_blank`} href="https://calendly.com/contact-aven-ia/30min"
                    className="px-6 py-3 rounded-xl bg-gradient-to-r hover:from-[#9B00FF]/60 hover:to-[#00B9FF]/60 text-white font-semibold shadow-lg hover:scale-105 transition">
                     Réserver une démo pour découvrir nos offres en action
                 </a>

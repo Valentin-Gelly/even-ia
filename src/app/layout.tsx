@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Header from "./components/Header";
+import VoiceflowWidget from "@/app/components/VoiceflowWidget";
 
 export const metadata: Metadata = {
     title: "AVEN.IA - Agents IA pour TPME",
@@ -18,6 +19,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
 
         {/* Footer toujours affiché */}
+        <VoiceflowWidget />
+
         </body>
         </html>
     );
