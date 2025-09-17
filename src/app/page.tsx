@@ -15,7 +15,7 @@ export default function Home() {
     };
 
     return (
-        <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A] font-sans flex flex-col items-center justify-center h-full">
+        <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A]  flex flex-col items-center justify-center h-full">
             <motion.section
                 initial="hidden"
                 whileInView="visible"
@@ -28,7 +28,7 @@ export default function Home() {
                 <div
                     className="mx-auto w-full md:max-w-7xl md:w-[60%] flex flex-col justify-center items-start text-left">
                     <section className="max-w-7xl mx-auto px-6">
-                        <h2 className="text-left text-4xl sm:text-5xl lg:text-6xl tracking-tight bg-gradient-to-r  bg-clip-text text-black ">
+                        <h1 className="text-left text-4xl sm:text-5xl lg:text-6xl tracking-tight bg-gradient-to-r  bg-clip-text text-black font-bold">
                             <Typewriter
                             options={{
                                 strings: [
@@ -41,7 +41,7 @@ export default function Home() {
                                 cursor: "|",
                             }}
                         />
-                        </h2>
+                        </h1>
                         <p className="mt-6 text-xl text-slate-700 max-w-2xl  text-left">
                             Nous créons des agents d’accueil intelligents qui automatisent vos échanges clients,
                             libèrent votre temps et font passer votre entreprise dans une nouvelle dimension.
@@ -52,11 +52,14 @@ export default function Home() {
                         </a>
                     </section>
                 </div>
-                <img
+                <Image
                     src="/home-bot.png"
-                    alt="Image d'illustration"
-                    className="right-0 top-0 w-60 md:h-80 md:w-80 lg:h-96 lg:w-96 object-contain rounded-4xl -z-10 max-w-full h-auto margin-auto">
-                </img>
+                    alt="AVEN.IA Logo"
+                    width={350}
+                    height={40}
+                    priority
+                    className="object-contain"
+                />
             </motion.section>
             <motion.section
                 initial="hidden"
@@ -67,17 +70,19 @@ export default function Home() {
                 md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-[5em]"
                 viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
-                <section className="w-full md:max-w-7xl mx-auto px-6 md:py-24 text-center flex items-center flex-wrap justify-around gap-10">
-                    <Image
-                        src="/aven-ia-light.png"
-                        alt="AVEN.IA Logo"
-                        width={250}
-                        height={20}
-                        priority
-                        className="object-contain"
-                    />
+                <section className="w-full md:max-w-7xl mx-auto px-6 md:py-12 text-center flex items-center flex-wrap justify-around">
+                    <div className={`md:w-2/5`}>
+                        <Image
+                            src="/aven-ia-light.png"
+                            alt="AVEN.IA Logo"
+                            width={350}
+                            height={40}
+                            priority
+                            className="object-contain"
+                        />
+                    </div>
                     <div className={`md:w-3/5`}>
-                        <h2 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Notre promesse</h2>
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Notre promesse</h2>
                         <p className="text-xl text-slate-700 text-left">
                             Chez AVEN.IA, nous aidons les TPME à franchir un cap : automatiser les premiers échanges
                             avec leurs clients tout en offrant une expérience moderne et professionnelle. <br/><br/>
@@ -92,12 +97,12 @@ export default function Home() {
                 whileInView="visible"
                 variants={fadeIn}
                 custom={0}
-                className="relative max-w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
+                className="relative w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
                 md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12"
                 viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
                 <section className="max-w-6xl mx-auto px-6 py-16">
-                    <h2 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Ce que nous faisons</h2>
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Ce que nous faisons</h2>
                     <ul className="flex flex-wrap gap-6 text-lg text-slate-700 justify-center">
                         <li className="lg:w-1/4 md:w-2/5">✔ Répondre instantanément aux questions fréquentes</li>
                         <li className="md:w-1/3">✔ Qualifier les prospects et collecter leurs informations</li>
@@ -112,12 +117,12 @@ export default function Home() {
                 whileInView="visible"
                 variants={fadeIn}
                 custom={0}
-                className="relative max-w-5xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
+                className="relative w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
                 md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12"
                 viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
                 <section className="max-w-6xl mx-auto px-6 md:py-16">
-                    <h2 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Comment ça fonctionne</h2>
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Comment ça fonctionne</h2>
                     <ol className="space-y-6 text-xl text-slate-700 max-w-3xl mx-auto">
                         <li><span className="font-bold text-[#00B9FF]">1.</span> Vous réservez une démo.</li>
                         <li><span className="font-bold text-[#00B9FF]">2.</span> Nous concevons votre agent IA personnalisé.
@@ -152,12 +157,12 @@ export default function Home() {
                 whileInView="visible"
                 variants={fadeIn}
                 custom={0}
-                className="relative max-w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap
+                className="relative w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap
                 text-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12"
                 viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
                 <section className="max-w-6xl mx-auto px-6 py-16">
-                    <h2 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Pourquoi nous choisir</h2>
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Pourquoi nous choisir</h2>
                     <ul className="grid gap-8 md:grid-cols-2 text-lg text-slate-700">
                         <li>✔ Une approche 100 % personnalisée</li>
                         <li>✔ Une intégration fluide à vos outils existants</li>
@@ -194,13 +199,13 @@ export default function Home() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.1 }}
-                    className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">
+                    className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">
                     Ils nous ont fait confiance
                 </motion.h2>
                 <section className="flex flex-wrap justify-center gap-8 w-full mx-auto md:mt-16">
                     {[
                         {
-                            name: "Open Ouest Provence Entreprise",
+                            name: "OPEn  Ouest Provence Entreprise",
                             link: "https://www.entreprisesouestprovence.fr/",
                             description: "Un acteur local engagé pour le développement économique et l’innovation.",
                             image: "/client/open-mistral.png",

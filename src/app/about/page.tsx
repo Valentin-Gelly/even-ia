@@ -15,7 +15,7 @@ export default function About() {
     };
 
     return (
-        <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A] font-sans flex flex-col items-center justify-center">
+        <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A]  flex flex-col items-center justify-center">
             {/* Mission */}
             <motion.section
                 initial="hidden"
@@ -128,11 +128,11 @@ export default function About() {
                 <div className="grid gap-8 md:grid-cols-2">
                     <div className="p-8 bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl text-center">
                         <Image
-                            src="/profile-icon.png"
+                            src="/vincent.png"
                             alt="Vincent"
                             width={120}
                             height={120}
-                            className="rounded-full object-cover border-4 border-[#00B9FF]/40 shadow-lg mx-auto"
+                            className="rounded-full object-cover border-4 border-[#00B9FF]/40 shadow-lg mx-auto overflow-hidden aspect-square"
                         />
                         <h3 className="text-2xl font-bold">Vincent</h3>
                         <p className="text-slate-600">Co-fondateur</p>
@@ -145,11 +145,11 @@ export default function About() {
                     </div>
                     <div className="p-8 bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl text-center">
                         <Image
-                            src="/profile-icon.png"
+                            src="/bastien.png"
                             alt="Bastien"
                             width={120}
                             height={120}
-                            className="rounded-full object-cover border-4 border-[#00B9FF]/40 shadow-lg mx-auto"
+                            className="rounded-full object-cover border-4 border-[#00B9FF]/40 shadow-lg mx-auto overflow-hidden aspect-square"
                         />
                         <h3 className="text-2xl font-bold">Bastien</h3>
                         <p className="text-slate-600">Co-fondateur</p>

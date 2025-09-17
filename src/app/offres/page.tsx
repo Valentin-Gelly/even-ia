@@ -14,7 +14,7 @@ export default function Offre() {
     };
 
     return (
-        <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A] font-sans flex flex-col items-center justify-center h-full">
+        <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A]  flex flex-col items-center justify-center h-full">
             <motion.section
                 initial="hidden"
                 whileInView="visible"
@@ -31,7 +31,7 @@ export default function Offre() {
                         height={300}
                     />
                     <section>
-                        <h1 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Nos offres</h1>
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Nos offres</h1>
                         <p className="mt-6 text-xl text-slate-700">
                             Nos offres s’adaptent à votre rythme et à votre niveau de maturité digitale.
                             Que vous souhaitiez simplement automatiser vos réponses de base ou créer un agent
@@ -81,8 +81,8 @@ export default function Offre() {
                         <p className="text-lg mb-4">L’IA connectée à vos outils, pour gagner du temps</p>
                         {/* Prix */}
                         <div className="mb-6">
-                            <p className="text-4xl font-extrabold text-slate-900">990€<span className="text-lg font-medium"> /mois</span></p>
-                            <p className="text-slate-600">+ 1190€ setup</p>
+                            <p className="text-4xl font-extrabold text-slate-900">390€<span className="text-lg font-medium"> /mois</span></p>
+                            <p className="text-slate-600">+ 590€ setup</p>
                         </div>
                         <ul className="space-y-2 text-slate-700">
                             <li>✔ Tout de l’offre Essentiel</li>
@@ -100,8 +100,8 @@ export default function Offre() {
                         <p className="text-lg mb-4">L’expérience client ultime, 100 % sur mesure</p>
                         {/* Prix */}
                         <div className="mb-6">
-                            <p className="text-4xl font-extrabold text-slate-900">390€<span className="text-lg font-medium"> /mois</span></p>
-                            <p className="text-slate-600">+ 590€ setup</p>
+                            <p className="text-4xl font-extrabold text-slate-900">990€<span className="text-lg font-medium"> /mois</span></p>
+                            <p className="text-slate-600">+ 1190€ setup</p>
                         </div>
                         <ul className="space-y-2 text-slate-700">
                             <li>✔ Tout de l’offre Premium</li>
@@ -125,7 +125,7 @@ export default function Offre() {
             >
                 <section className="w-full text-center">
                     {/* Titre */}
-                    <h2 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text">
                         Comment choisir ?
                     </h2>
 

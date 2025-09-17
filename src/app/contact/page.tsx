@@ -3,7 +3,7 @@
 
 export default function Home() {
     return (
-        <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A] font-sans flex items-center justify-center py-20">
+        <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A]  flex items-center justify-center py-20">
 
             <section className="max-w-3xl w-full px-6 mt-24">
                 <h1 className="text-5xl font-bold text-center mb-6">Un projet, une idée, une question ?</h1>
