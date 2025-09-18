@@ -97,18 +97,18 @@ export default function Home() {
                 whileInView="visible"
                 variants={fadeIn}
                 custom={0}
-                className="relative w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
-                md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12"
+                className="relative md:w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
+                md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
                 viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
-                <section className="max-w-6xl mx-auto px-6 py-16">
+                <section className="w-full md:max-w-6xl mx-auto py-16 ">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Ce que nous faisons</h2>
                     <ul className="flex flex-wrap gap-6 text-lg text-slate-700 justify-center">
-                        <li className="lg:w-1/4 md:w-2/5">✔ Répondre instantanément aux questions fréquentes</li>
-                        <li className="md:w-1/3">✔ Qualifier les prospects et collecter leurs informations</li>
-                        <li className="md:w-1/3">✔ Prendre des rendez-vous automatiquement</li>
-                        <li className="md:w-1/3" >✔ Guider les visiteurs et fluidifier leur parcours</li>
-                        <li className="md:w-1/3">✔ Connecter ces données à vos outils (CRM, Google Sheets, etc.)</li>
+                        <li className="w-full md:w-4/9">✔ Répondre instantanément aux questions fréquentes</li>
+                        <li className="w-full md:w-4/9">✔ Qualifier les prospects et collecter leurs informations</li>
+                        <li className="w-full md:w-4/9">✔ Prendre des rendez-vous automatiquement</li>
+                        <li className="w-full md:w-4/9" >✔ Guider les visiteurs et fluidifier leur parcours</li>
+                        <li className="w-full md:w-4/9">✔ Connecter ces données à vos outils (CRM, Google Sheets, etc.)</li>
                     </ul>
                 </section>
             </motion.section>
@@ -117,8 +117,8 @@ export default function Home() {
                 whileInView="visible"
                 variants={fadeIn}
                 custom={0}
-                className="relative w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
-                md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12"
+                className="relative md:w-7xl px-6 pb-10 flex flex-col gap-8 justify-center text-center
+                md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
                 viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
                 <section className="max-w-6xl mx-auto px-6 md:py-16">
@@ -157,8 +157,8 @@ export default function Home() {
                 whileInView="visible"
                 variants={fadeIn}
                 custom={0}
-                className="relative w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap
-                text-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12"
+                className="relative md:w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap
+                text-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
                 viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
                 <section className="max-w-6xl mx-auto px-6 py-16">
