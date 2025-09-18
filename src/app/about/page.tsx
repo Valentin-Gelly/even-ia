@@ -22,7 +22,7 @@ export default function About() {
                 whileInView="visible"
                 variants={fadeIn}
                 custom={0}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="relative max-w-7xl px-6 pt-0 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center md:rounded-3xl mt-[10em]"
             >
                 <section className="max-w-5xl mx-auto px-6 py-16 text-center">
@@ -44,7 +44,7 @@ export default function About() {
                 variants={fadeIn}
                 custom={0}
                 className="relative max-w-7xl mx-auto px-6 flex justify-center"
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
             >
                 <section className="w-full text-center">
                     <h2 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text">
@@ -100,7 +100,7 @@ export default function About() {
                 whileInView="visible"
                 variants={fadeIn}
                 custom={2}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="max-w-5xl mx-auto px-6 py-20 text-center"
             >
                 <h2 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">

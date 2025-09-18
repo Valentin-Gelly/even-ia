@@ -68,7 +68,7 @@ export default function Home() {
                 custom={0}
                 className="relative w-full md:max-w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
                 md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-[5em]"
-                viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible
+                viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
                 <section className="w-full md:max-w-7xl mx-auto px-6 md:py-12 text-center flex items-center flex-wrap justify-around">
                     <div className={`md:w-2/5`}>
@@ -99,7 +99,7 @@ export default function Home() {
                 custom={0}
                 className="relative w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
                 md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12"
-                viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible
+                viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
                 <section className="max-w-6xl mx-auto px-6 py-16">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Ce que nous faisons</h2>
@@ -119,7 +119,7 @@ export default function Home() {
                 custom={0}
                 className="relative w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
                 md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12"
-                viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible
+                viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
                 <section className="max-w-6xl mx-auto px-6 md:py-16">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Comment ça fonctionne</h2>
@@ -159,7 +159,7 @@ export default function Home() {
                 custom={0}
                 className="relative w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap
                 text-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12"
-                viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible
+                viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
                 <section className="max-w-6xl mx-auto px-6 py-16">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Pourquoi nous choisir</h2>

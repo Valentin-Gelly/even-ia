@@ -38,7 +38,7 @@ export default function Header() {
             variants={fadeIn}
             custom={0}
             className="fixed top-0 left-0 w-full z-50"
-            viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible
+            viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
         >
             {/* Header */}
             <header
@@ -53,7 +53,7 @@ export default function Header() {
                 }`}>
                     <div className="flex-shrink-0">
                         <Link href="/" className="text-5xl py-4 font-extrabold tracking-wide">
-                            AVEN-IA
+                            AVEN.IA
                         </Link>
                     </div>
                     <nav className="hidden md:flex items-center gap-6 text-slate-700 font-medium text-lg">
