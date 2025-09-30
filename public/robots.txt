@@ -1,0 +1,23 @@
+User-agent: *
+Disallow:
+
+# Assistants IA temps réel
+User-agent: ChatGPT-User
+Allow: /
+User-agent: MistralAI-User
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Bot d'index IA
+User-agent: PerplexityBot
+Allow: /
+
+# Extensions Google / Apple
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://aven-ia.com/sitemap.xml
+Sitemap: https://aven-ia.com/llm-sitemap.xml

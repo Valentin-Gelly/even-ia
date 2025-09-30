@@ -97,21 +97,115 @@ export default function Home() {
                 whileInView="visible"
                 variants={fadeIn}
                 custom={0}
-                className="relative md:w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
-                md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
-                viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
+                className="relative md:w-7xl px-8 py-16 flex flex-col gap-6 justify-center text-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
+                viewport={{ once: true, amount: 0.2 }}
             >
-                <section className="w-full md:max-w-6xl mx-auto py-16 ">
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Ce que nous faisons</h2>
-                    <ul className="flex flex-wrap gap-6 text-lg text-slate-700 justify-center">
-                        <li className="w-full md:w-4/9">✔ Répondre instantanément aux questions fréquentes</li>
-                        <li className="w-full md:w-4/9">✔ Qualifier les prospects et collecter leurs informations</li>
-                        <li className="w-full md:w-4/9">✔ Prendre des rendez-vous automatiquement</li>
-                        <li className="w-full md:w-4/9" >✔ Guider les visiteurs et fluidifier leur parcours</li>
-                        <li className="w-full md:w-4/9">✔ Connecter ces données à vos outils (CRM, Google Sheets, etc.)</li>
-                    </ul>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6 tracking-tight bg-gradient-to-r bg-clip-text">
+                    Pourquoi un agent d’accueil IA est indispensable
+                </h2>
+                <p className="text-xl text-slate-700 mb-4">
+                    <b>8 consommateurs sur 10 attendent une réponse immédiate en ligne.</b> Les TPE/PME perdent encore des prospects à cause des appels manqués et mails non traités.
+                </p>
+                <p className="text-xl text-slate-700">
+                    👉 Notre agent IA agit 24/7 comme un collaborateur digital : il accueille vos visiteurs, filtre les demandes et alimente votre CRM.
+                </p>
+            </motion.section>
+
+
+            {/* SECTION – Les avantages AVEN.IA – Les 4 piliers */}
+            <motion.section
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeIn}
+                custom={0}
+                className="relative md:w-7xl px-6 pb-10 flex flex-col gap-8 justify-center text-center
+  md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
+                viewport={{ once: true, amount: 0.2 }}
+            >
+                <section className="max-w-6xl mx-auto px-6 md:py-16">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-10 tracking-tight bg-gradient-to-r bg-clip-text">
+                        Les avantages AVEN.IA – Les 4 piliers
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                        <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-xl shadow-xl border border-slate-200">
+                            <h3 className="text-2xl font-bold mb-2">🛡️ Conformité RGPD intégrée</h3>
+                            <p className="text-lg text-slate-700">
+                                Hébergement en Europe, respect CNIL, minimisation des données. La confiance est au cœur de notre solution.
+                            </p>
+                        </div>
+                        <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-xl shadow-xl border border-slate-200">
+                            <h3 className="text-2xl font-bold mb-2">🔗 Intégration transparente</h3>
+                            <p className="text-lg text-slate-700">
+                                Connexion avec vos outils quotidiens : CRM (HubSpot, Pipedrive, Notion), agenda en ligne, automatisations Make/n8n.
+                            </p>
+                        </div>
+                        <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-xl shadow-xl border border-slate-200">
+                            <h3 className="text-2xl font-bold mb-2">📊 Résultats mesurables</h3>
+                            <p className="text-lg text-slate-700">
+                                Rapports clairs : leads générés, temps économisé, performance de votre agent IA. Vous savez exactement ce que vous gagnez.
+                            </p>
+                        </div>
+                        <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-xl shadow-xl border border-slate-200">
+                            <h3 className="text-2xl font-bold mb-2">🤝 Accompagnement humain</h3>
+                            <p className="text-lg text-slate-700">
+                                Contrairement aux solutions “plug & play”, nous restons à vos côtés pour configurer, ajuster et optimiser votre agent IA.
+                            </p>
+                        </div>
+                    </div>
                 </section>
             </motion.section>
+
+            {/* SECTION – Les chiffres clés */}
+            <motion.section
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeIn}
+                custom={0}
+                className="relative md:w-7xl px-6 pb-10 flex flex-col gap-8 justify-center text-center
+  md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
+                viewport={{ once: true, amount: 0.2 }}
+            >
+                <section className="max-w-4xl mx-auto px-6 md:py-16">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text">
+                        Les chiffres clés
+                    </h2>
+                    <ul className="space-y-4 text-lg text-slate-700 text-left max-w-3xl mx-auto list-disc pl-6">
+                        <li>80 % des questions clients simples peuvent être automatisées par un chatbot intelligent (source : Salesforce).</li>
+                        <li>87 % des utilisateurs déclarent une expérience positive avec les chatbots (source : Botpress, 2024).</li>
+                        <li>Les entreprises qui utilisent un agent IA réduisent en moyenne de 30 % leur volume d’emails clients (source : Intercom).</li>
+                    </ul>
+                    <p className="mt-6 text-xl text-slate-700">
+                        👉 Vous n’avez pas encore besoin de nous croire sur parole. Les chiffres parlent d’eux-mêmes.
+                    </p>
+                </section>
+            </motion.section>
+
+            {/* CTA final */}
+            <motion.section
+                initial="hidden"
+                whileInView="visible"
+                variants={fadeIn}
+                custom={0}
+                className="relative md:w-7xl px-6 py-20 flex flex-col items-center text-center bg-gradient-to-r from-[#9B00FF]/10 to-[#00B9FF]/10
+  md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-16 w-full"
+                viewport={{ once: true, amount: 0.2 }}
+            >
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
+                    Et si vous testiez votre futur agent IA ?
+                </h2>
+                <p className="text-xl text-slate-700 max-w-2xl mb-8">
+                    Ne laissez plus vos prospects sans réponse. Offrez à votre entreprise un accueil digital premium dès aujourd’hui.
+                </p>
+                <a
+                    href="https://calendly.com/contact-aven-ia/30min"
+                    target={`_blank`}
+                    rel="noopener noreferrer"
+                    className="px-8 py-4 rounded-xl bg-gradient-to-r from-[#9B00FF] to-[#00B9FF] text-white font-semibold shadow-lg hover:scale-105 transition"
+                >
+                    📅 Réserver ma démo gratuite
+                </a>
+            </motion.section>
+
             <motion.section
                 initial="hidden"
                 whileInView="visible"
@@ -152,44 +246,23 @@ export default function Home() {
                     </div>
                 </section>
             </motion.section>
-            <motion.section
-                initial="hidden"
-                whileInView="visible"
-                variants={fadeIn}
-                custom={0}
-                className="relative md:w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap
-                text-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
-                viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
-            >
-                <section className="max-w-6xl mx-auto px-6 py-16">
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Pourquoi nous choisir</h2>
-                    <ul className="grid gap-8 md:grid-cols-2 text-lg text-slate-700">
-                        <li>✔ Une approche 100 % personnalisée</li>
-                        <li>✔ Une intégration fluide à vos outils existants</li>
-                        <li>✔ Un accompagnement humain de bout en bout</li>
-                        <li>✔ Une expérience utilisateur premium et différenciante</li>
-                    </ul>
-                </section>
-            </motion.section>
             {/*<motion.section*/}
             {/*    initial="hidden"*/}
             {/*    whileInView="visible"*/}
             {/*    variants={fadeIn}*/}
             {/*    custom={0}*/}
-            {/*    className="relative max-w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse*/}
-            {/*    md:flex-wrap text-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12"*/}
-            {/*    viewport={{ once: true, amount: 0.5 }} // amount: 0.5 signifie que 50% de la section doit être visible*/}
+            {/*    className="relative md:w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap*/}
+            {/*    text-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"*/}
+            {/*    viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible*/}
             {/*>*/}
-            {/*    <section className="backdrop-blur-xl py-16">*/}
-            {/*        <h2 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Témoignages</h2>*/}
-            {/*        <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-2 text-xl italic text-slate-700">*/}
-            {/*            <blockquote>« En une semaine, notre agent IA était en ligne et nous a déjà permis de récupérer 30*/}
-            {/*                nouveaux contacts qualifiés. » <br/>— Julien, e-commerce*/}
-            {/*            </blockquote>*/}
-            {/*            <blockquote>« On a enfin un accueil pro sur notre site, et on ne perd plus de temps à répondre aux*/}
-            {/*                mêmes questions. » <br/>— Clara, dirigeante PME*/}
-            {/*            </blockquote>*/}
-            {/*        </div>*/}
+            {/*    <section className="max-w-6xl mx-auto px-6 py-16">*/}
+            {/*        <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Pourquoi nous choisir</h2>*/}
+            {/*        <ul className="grid gap-8 md:grid-cols-2 text-lg text-slate-700">*/}
+            {/*            <li>✔ Une approche 100 % personnalisée</li>*/}
+            {/*            <li>✔ Une intégration fluide à vos outils existants</li>*/}
+            {/*            <li>✔ Un accompagnement humain de bout en bout</li>*/}
+            {/*            <li>✔ Une expérience utilisateur premium et différenciante</li>*/}
+            {/*        </ul>*/}
             {/*    </section>*/}
             {/*</motion.section>*/}
             <section

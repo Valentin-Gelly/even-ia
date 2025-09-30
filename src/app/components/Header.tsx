@@ -19,6 +19,7 @@ export default function Header() {
         { name: "Accueil", href: "/" },
         { name: "Offres", href: "/offres" },
         { name: "À propos", href: "/about" },
+        { name: "FAQ", href: "/faq" },
         { name: "Contact", href: "/contact" },
     ];
     useEffect(() => {
