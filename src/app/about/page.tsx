@@ -137,11 +137,11 @@ export default function About() {
                         <h3 className="text-2xl font-bold">Vincent</h3>
                         <p className="text-slate-600">Co-fondateur</p>
                         <blockquote className="italic mt-4 text-slate-700 text-lg">
-                            Mon expérience professionnelle m'a permis de comprendre que je souhaitais aller au-delà d'une
-                            simple tâche. Mon attrait pour les nouvelles technologies, en particulier l'intelligence artificielle,
-                            m'a fait prendre conscience qu'il est possible de combler d'importantes failles dans l'organisation de systèmes,
-                            pourtant très bien rodés, dans le but de les optimiser. Aujourd'hui, mon ambition est de permettre aux entreprises
-                            de se développer, de s'améliorer et d'exploiter pleinement les nouvelles technologies.
+                            Mon expérience professionnelle m&#39;a permis de comprendre que je souhaitais aller au-delà d&#39;une
+                            simple tâche. Mon attrait pour les nouvelles technologies, en particulier l&#39;intelligence artificielle,
+                            m&#39;a fait prendre conscience qu&#39;il est possible de combler d&#39;importantes failles dans l&#39;organisation de systèmes,
+                            pourtant très bien rodés, dans le but de les optimiser. Aujourd&#39;hui, mon ambition est de permettre aux entreprises
+                            de se développer, de s&#39;améliorer et d&#39;exploiter pleinement les nouvelles technologies.
                         </blockquote>
                     </div>
                     <div className="p-8 bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl text-center">
