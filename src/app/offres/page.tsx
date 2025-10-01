@@ -24,16 +24,16 @@ export default function Offre() {
                 className="relative max-w-7xl px-6 pt-0 flex justify-center flex-wrap text-center md:rounded-3xl mt-[7em] md:mt-[15em]"
                 viewport={{ once: true, amount: 0.1 }}
             >
-                <section className="mx-auto text-center flex flex-col md:flex-row items-center">
+                <section className="mx-auto text-center flex flex-col  md:flex-row items-center">
                     <Image
                         src="/sitting-bot.png"
                         alt="Logo fixe"
                         width={450}
                         height={450}
-                        className="absolute -translate-x-1/2 pointer-events-none"
+                        className="hidden md:block absolute -translate-x-1/2 pointer-events-none"
                     />
                     <section className={`w-5/6 mx-auto`}>
-                        <h1 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text">Nos offres</h1>
+                        <h1 className="text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text">Nos offres</h1>
                         <p className="mt-6 text-xl text-slate-700 ">
                             Nos offres s’adaptent à votre rythme et à votre niveau de maturité digitale.
                             Que vous souhaitiez simplement automatiser vos réponses de base ou créer un agent
@@ -217,8 +217,11 @@ export default function Offre() {
             </motion.section>
 
             <section className="w-full md:max-w-5xl md:mx-auto md:px-6 py-20 text-center">
-                <a target={`_blank`} href="https://calendly.com/contact-aven-ia/30min"
-                   className="px-6 py-3 rounded-xl bg-gradient-to-r hover:from-[#9B00FF]/60 hover:to-[#00B9FF]/60 text-white font-semibold shadow-lg hover:scale-105 transition">
+                <a
+                    target={`_blank`}
+                    href="https://calendly.com/contact-aven-ia/30min"
+                    className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r hover:from-[#9B00FF]/60 hover:to-[#00B9FF]/60 text-white font-semibold shadow-lg md:hover:scale-105 transition"
+                >
                     Réserver une démo pour découvrir nos offres en action
                 </a>
             </section>

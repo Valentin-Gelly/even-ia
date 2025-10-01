@@ -97,16 +97,16 @@ export default function Home() {
                 whileInView="visible"
                 variants={fadeIn}
                 custom={0}
-                className="relative md:w-7xl px-8 py-16 flex flex-col gap-6 justify-center text-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
+                className="relative md:w-7xl px-8 py-16 flex flex-col gap-6 justify-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
                 viewport={{ once: true, amount: 0.2 }}
             >
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6 tracking-tight bg-gradient-to-r bg-clip-text">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6 tracking-tight bg-gradient-to-r bg-clip-text text-center">
                     Pourquoi un agent d’accueil IA est indispensable
                 </h2>
-                <p className="text-xl text-slate-700 mb-4">
+                <p className="text-xl text-slate-700 mb-4 md:text-center ">
                     <b>8 consommateurs sur 10 attendent une réponse immédiate en ligne.</b> Les TPE/PME perdent encore des prospects à cause des appels manqués et mails non traités.
                 </p>
-                <p className="text-xl text-slate-700">
+                <p className="text-xl text-slate-700 md:text-center ">
                     👉 Notre agent IA agit 24/7 comme un collaborateur digital : il accueille vos visiteurs, filtre les demandes et alimente votre CRM.
                 </p>
             </motion.section>
@@ -215,7 +215,7 @@ export default function Home() {
                 md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
                 viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
-                <section className="max-w-6xl mx-auto px-6 md:py-16">
+                <section className="max-w-6xl mx-auto px-6 py-16">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Comment ça fonctionne</h2>
                     <ol className="space-y-6 text-xl text-slate-700 max-w-3xl mx-auto">
                         <li><span className="font-bold text-[#00B9FF]">1.</span> Vous réservez une démo.</li>

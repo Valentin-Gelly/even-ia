@@ -2,9 +2,9 @@
 
 export default function Contact() {
     return (
-        <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A] flex items-center justify-center py-20 px-4 mt-24">
+        <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A] flex items-center justify-center py-20 px-4">
 
-            <section className="max-w-3xl w-full">
+            <section className="max-w-3xl w-full  mt-24">
                 <h1 className="text-4xl sm:text-5xl font-bold text-center mb-6">
                     Un projet, une idée, une question ?
                 </h1>

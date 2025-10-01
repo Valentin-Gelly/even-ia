@@ -143,7 +143,7 @@ Signature : 990 €/mois + setup 1190 €`,
                 variants={fadeIn}
                 custom={0}
                 className="relative max-w-7xl mx-auto px-6 py-20 flex justify-center "
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0 }}
             >
                 <section className="w-full text-center mt-[7em]">
                     <h1 className="text-5xl font-bold mb-12 tracking-tight bg-gradient-to-r from-[#9B00FF] to-[#00B9FF] bg-clip-text text-transparent">
@@ -163,7 +163,7 @@ Signature : 990 €/mois + setup 1190 €`,
                                     </span>
                                 </summary>
                                 <div className="overflow-hidden transition-all duration-500 max-h-0 group-open:max-h-96">
-                                    <p className="select-none mt-3 text-slate-600 whitespace-pre-line text-base opacity-0 translate-y-2 transition-all duration-500 group-open:opacity-100 group-open:translate-y-0">
+                                    <p className="select-none mt-3 text-slate-600 whitespace-pre-line text-base opacity-0 translate-y-2 transition-all duration-500 group-open:opacity-100 group-open:translate-y-0 min-h-fit">
                                         {item.answer}
                                     </p>
                                 </div>
