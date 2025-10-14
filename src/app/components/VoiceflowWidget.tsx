@@ -6,17 +6,17 @@ export default function VoiceflowWidget() {
     // Fonction principale exécutée après le chargement du script Voiceflow
     const initVoiceflow = () => {
         // Utils pour injection CSS
-        const injectStyles = (root, css) => {
+        const injectStyles = (root: Document, css: string) => {
             if (!root) return;
             const id = "vf-custom-styles";
-            if (root.getElementById && root.getElementById(id)) return;
+            if (root.getElementById(id)) return;
             const style = document.createElement("style");
             style.id = id;
             style.textContent = css;
             root.appendChild(style);
         };
 
-        const waitForEl = (selector, root = document) =>
+        const waitForEl = (selector: string, root :Document | HTMLElement= document) =>
             new Promise((resolve) => {
                 const el = root.querySelector(selector);
                 if (el) return resolve(el);
