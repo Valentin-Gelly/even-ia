@@ -3,7 +3,6 @@
 import Script from "next/script";
 
 export default function VoiceflowWidget() {
-    // Fonction principale exécutée après le chargement du script Voiceflow
     const initVoiceflow = () => {
         // Utils pour injection CSS
         const injectStyles = (root: Document, css: string) => {
