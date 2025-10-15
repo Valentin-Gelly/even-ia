@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { span } from "framer-motion/client";
 import Link from "next/link";
 
 export default function FAQ() {

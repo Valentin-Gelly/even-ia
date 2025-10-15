@@ -3,8 +3,15 @@
 import { motion } from "framer-motion";
 import { Lightbulb, CheckCircle2, Users, Rocket } from "lucide-react";
 import Image from "next/image";
+import {useEffect, useState} from "react";
 
 export default function About() {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     const fadeIn = {
         hidden: { opacity: 0, y: 50 },
         visible: (custom: number) => ({
@@ -13,6 +20,8 @@ export default function About() {
             transition: { delay: custom * 0.2, duration: 0.8 },
         }),
     };
+
+    if (!isMounted) return null; // Empêche le rendu avant le montage
 
     return (
         <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A]  flex flex-col items-center justify-center">

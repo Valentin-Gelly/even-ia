@@ -3,8 +3,15 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import {useEffect, useState} from "react";
 
 export default function Offre() {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     const fadeIn = {
         hidden: { opacity: 0, y: 50 },
         visible: (custom: number) => ({
@@ -13,6 +20,8 @@ export default function Offre() {
             transition: { delay: custom * 0.2, duration: 0.8 },
         }),
     };
+
+    if (!isMounted) return null; // Empêche le rendu avant le montage
 
     return (
         <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A]  flex flex-col items-center justify-center h-full">
@@ -167,7 +176,7 @@ export default function Offre() {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeIn}
-                custom={4}
+                custom={3}
                 className="relative md:w-7xl px-6 py-16 flex justify-center text-center md:rounded-3xl backdrop-blur-2xl"
                 viewport={{ once: true, amount: 0.2 }}
             >
