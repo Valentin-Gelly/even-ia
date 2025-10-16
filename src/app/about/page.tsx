@@ -4,10 +4,17 @@ import { Variants } from "framer-motion";
 import { motion } from "framer-motion";
 import { Lightbulb, CheckCircle2, Users, Rocket } from "lucide-react";
 import Image from "next/image";
+import {useEffect, useState} from "react";
 
 export default function About() {
-    const fadeIn: Variants = {
-        hidden: { opacity: 0, y: 50, scale: 0.95 },
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    const fadeIn = {
+        hidden: { opacity: 0, y: 50 },
         visible: (custom: number) => ({
             opacity: 1,
             y: 0,
@@ -16,6 +23,8 @@ export default function About() {
         }),
     } as Variants;
 
+
+    if (!isMounted) return null; // Empêche le rendu avant le montage
 
     return (
         <motion.main
