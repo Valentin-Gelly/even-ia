@@ -1,19 +1,8 @@
 'use client';
 
-import { motion } from "framer-motion";
-import { span } from "framer-motion/client";
 import Link from "next/link";
 
 export default function FAQ() {
-    const fadeIn = {
-        hidden: { opacity: 0, y: 50 },
-        visible: (custom: number) => ({
-            opacity: 1,
-            y: 0,
-            transition: { delay: custom * 0.1, duration: 0.6 },
-        }),
-    };
-
     const faqs = [
         {
             question: "Qu’est-ce qu’un agent d’accueil IA ?",
@@ -56,7 +45,7 @@ Signature : 990 €/mois + setup 1190 €`,
         {
             question: "Y a-t-il des limites ?",
             answer:
-                "Oui. Quand une question sort totalement de la base de connaissances (hors sujet), l’agent ne peut pas répondre et escalade vers l’humain.",
+                "Oui. Quand une question est hors de la base de connaissance, l’agent ne peut pas répondre et escalade vers l’humain.",
         },
         {
             question: "L’agent peut-il prendre des rendez-vous ?",
@@ -84,7 +73,7 @@ Signature : 990 €/mois + setup 1190 €`,
         },
         {
             question: "L’agent est-il multilingue ?",
-            answer: "Oui. Français, anglais et autres langues si configurées.",
+            answer: "Oui. Français, Anglais et autres langues si configurées.",
         },
         {
             question: "Quelles garanties de sécurité proposez-vous ?",
@@ -137,13 +126,8 @@ Signature : 990 €/mois + setup 1190 €`,
 
     return (
         <main className="min-h-screen bg-[#F5F3F0] text-[#0F172A] font-sans">
-            <motion.section
-                initial="hidden"
-                whileInView="visible"
-                variants={fadeIn}
-                custom={0}
+            <section
                 className="relative max-w-7xl mx-auto px-6 py-20 flex justify-center "
-                viewport={{ once: true, amount: 0 }}
             >
                 <section className="w-full text-center mt-[7em]">
                     <h1 className="text-5xl font-bold mb-12 tracking-tight bg-gradient-to-r from-[#9B00FF] to-[#00B9FF] bg-clip-text text-transparent">
@@ -180,7 +164,7 @@ Signature : 990 €/mois + setup 1190 €`,
                     </section>
 
                 </section>
-            </motion.section>
+            </section>
         </main>
     );
 }

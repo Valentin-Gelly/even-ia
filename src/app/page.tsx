@@ -20,10 +20,9 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeIn}
-                custom={0}
                 className="relative max-w-7xl px-6 pt-0 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center md:rounded-3xl md:border
                 md:border-black/5 p-10 md:shadow-2xl backdrop-blur-2xl md:mt-[14em] mt-[3em]"
-                viewport={{ once: true, amount: 0.25 }} // amount: 0.5 signifie que 50% de la section doit être visible
+                viewport={{ once: true, amount: 0 }}
             >
                 <div
                     className="mx-auto w-full md:max-w-7xl md:w-[60%] flex flex-col justify-center items-start text-left">
@@ -65,10 +64,9 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeIn}
-                custom={0}
-                className="relative w-full md:max-w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
-                md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-[5em]"
-                viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
+                className="relative w-full px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap text-center
+                md:rounded-3xl  backdrop-blur-2xl md:mt-[5em]"
+                viewport={{ once: true, amount: 0.1 }}
             >
                 <section className="w-full md:max-w-7xl mx-auto px-6 md:py-12 text-center flex items-center flex-wrap justify-around">
                     <div className={`md:w-2/5`}>
@@ -96,9 +94,8 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeIn}
-                custom={0}
                 className="relative md:w-7xl px-8 py-16 flex flex-col gap-6 justify-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.1 }}
             >
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6 tracking-tight bg-gradient-to-r bg-clip-text text-center">
                     Pourquoi un agent d’accueil IA est indispensable
@@ -117,10 +114,9 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeIn}
-                custom={0}
                 className="relative md:w-7xl px-6 pb-10 flex flex-col gap-8 justify-center text-center
-  md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
-                viewport={{ once: true, amount: 0.2 }}
+  md:rounded-3xl md:mt-12 w-full"
+                viewport={{ once: true, amount: 0.1 }}
             >
                 <section className="max-w-6xl mx-auto px-6 md:py-16">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-10 tracking-tight bg-gradient-to-r bg-clip-text">
@@ -160,10 +156,8 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeIn}
-                custom={0}
-                className="relative md:w-7xl px-6 pb-10 flex flex-col gap-8 justify-center text-center
-  md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
-                viewport={{ once: true, amount: 0.2 }}
+                className="relative md:w-7xl px-6 pb-10 flex flex-col gap-8 justify-center text-center backdrop-blur-2xl md:mt-12 w-full"
+                viewport={{ once: true, amount: 0.1 }}
             >
                 <section className="max-w-4xl mx-auto px-6 md:py-16">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text">
@@ -185,10 +179,9 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeIn}
-                custom={0}
                 className="relative md:w-7xl px-6 py-20 flex flex-col items-center text-center bg-gradient-to-r from-[#9B00FF]/10 to-[#00B9FF]/10
   md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-16 w-full"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.1 }}
             >
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
                     Et si vous testiez votre futur agent IA ?
@@ -210,10 +203,8 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeIn}
-                custom={0}
-                className="relative md:w-7xl px-6 pb-10 flex flex-col gap-8 justify-center text-center
-                md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"
-                viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
+                className="relative md:w-7xl px-6 pb-10 flex flex-col gap-8 justify-center text-center backdrop-blur-2xl md:mt-12 w-full"
+                viewport={{ once: true, amount: 0.1 }} // amount: 0.5 signifie que 50% de la section doit être visible
             >
                 <section className="max-w-6xl mx-auto px-6 py-16">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-6 tracking-tight bg-gradient-to-r bg-clip-text ">Comment ça fonctionne</h2>
@@ -250,7 +241,6 @@ export default function Home() {
             {/*    initial="hidden"*/}
             {/*    whileInView="visible"*/}
             {/*    variants={fadeIn}*/}
-            {/*    custom={0}*/}
             {/*    className="relative md:w-7xl px-6 pb-10 flex justify-center flex-wrap-reverse md:flex-wrap*/}
             {/*    text-center md:rounded-3xl md:border md:border-black/5 md:shadow-2xl backdrop-blur-2xl md:mt-12 w-full"*/}
             {/*    viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible*/}
@@ -294,7 +284,6 @@ export default function Home() {
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.1 }}
                             variants={fadeIn}
-                            custom={index + 1}
                             className="md:w-full sm:w-[45%] lg:w-[30%] rounded-3xl border border-black/5 bg-white/60 md:shadow-2xl backdrop-blur-2xl overflow-hidden flex flex-col transition-transform hover:scale-[1.02]"
                         >
                             <div className="relative w-full h-48">

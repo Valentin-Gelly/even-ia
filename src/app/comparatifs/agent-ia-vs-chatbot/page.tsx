@@ -23,7 +23,6 @@ export default function ComparatifPage() {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeIn}
-                custom={0}
                 className="max-w-5xl mx-auto px-6 py-20 text-center"
                 viewport={{ once: true, amount: 0.3 }}
             >
@@ -43,11 +42,10 @@ export default function ComparatifPage() {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeIn}
-                custom={1}
                 className="max-w-6xl mx-auto px-6 pb-16"
                 viewport={{ once: true, amount: 0.3 }}
             >
-                <div className="overflow-x-auto rounded-2xl shadow-xl backdrop-blur-xl border border-slate-200">
+                <div className="overflow-x-auto shadow-xl backdrop-blur-xl border border-slate-200">
                     <table className="min-w-full border-collapse text-sm md:text-base">
                         <thead className="bg-gradient-to-r from-[#9B00FF]/10 to-[#00B9FF]/10 text-slate-800">
                         <tr>
@@ -97,7 +95,6 @@ export default function ComparatifPage() {
                 initial="hidden"
                 whileInView="visible"
                 variants={fadeIn}
-                custom={2}
                 className="max-w-4xl mx-auto px-6 pb-20 text-center"
                 viewport={{ once: true, amount: 0.3 }}
             >

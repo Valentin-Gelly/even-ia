@@ -37,7 +37,6 @@ export default function Header() {
             initial="hidden"
             animate="visible"
             variants={fadeIn}
-            custom={0}
             className="fixed top-0 left-0 w-full z-50"
             viewport={{ once: true, amount: 0.2 }} // amount: 0.5 signifie que 50% de la section doit être visible
         >
